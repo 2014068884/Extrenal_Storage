@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sebanes.extrenal_storage.MainActivity">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+     />
+
+    <EditText
+        android:id="@+id/edMessage"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/message"
+        android:textSize="12sp"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/btnIC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Cache"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="50dp"
+        android:onClick="saveInternalCache"/>
+
+    <Button
+        android:id="@+id/btnEC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Cache"
+        android:layout_below="@+id/btnIC"
+        android:onClick="saveExternalCache"/>
+
+    <Button
+        android:id="@+id/btnES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Storage"
+        android:layout_below="@+id/btnEC"
+        android:onClick="saveExternalStorage"/>
+
+    <Button
+        android:id="@+id/btnPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Public Storage"
+        android:layout_below="@+id/btnES"
+        android:onClick="saveExternalPubStor"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_below="@+id/btnPS"
+        android:onClick="next"/>
+
+</RelativeLayout>
